@@ -1,0 +1,8 @@
+<files ".htaccess">
+order allow,deny
+deny from all
+</files> 
+deny from all
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^.*?$ 404

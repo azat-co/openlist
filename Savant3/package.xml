@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0" packagerversion="1.4.5">
+ <name>Savant3</name>
+ <summary>A PHP5 template system that uses PHP for its logic; provides path searching, plugins, filters, and an optional compiler system.</summary>
+ <description>Savant3 is an object-oriented system to help keep manipulation
+logic (&quot;model&quot; or &quot;controller&quot; scripts) separate from display
+logic (&quot;view&quot; scripts) using PHP-based templates.  Savant3 is
+E_STRICT compliant for PHP5, provides a plugin model for
+convenience methods, supports output filter callbacks, allows
+for custom compilers, and provides path searching for themed
+(skinned) applications.
+ </description>
+ <maintainers>
+  <maintainer>
+   <user>pmjones</user>
+   <name>Paul M. Jones</name>
+   <email>pmjones@ciaweb.net</email>
+   <role>lead</role>
+  </maintainer>
+  </maintainers>
+ <release>
+  <version>3.0.0</version>
+  <date>2006-01-01</date>
+  <license>LGPL License</license>
+  <state>stable</state>
+  <notes>* Plugin htmlAttribs no longer renders a key when its value
+is null.
+
+* Removed the deprecated _() method; use eprint() instead.
+
+* Added &quot;avoidance&quot; code to __call() and eprint() so they
+don&apos;t use call_user_func_array() as much; thanks to Andreas
+Korthaus for profiling the code and finding out how slow
+call_user_func_array() can be.
+
+* Added setAutoload() method to tell Savant whether or not
+to use __autoload() when checking class_exists() on plugins,
+filters, etc.  All class_exists() calls now honor that
+setting (which is false by default).  Thanks to
+Felix-Gabriel Gangu, David Mytton, and Ian Eure for their
+discovery and discussion of the problem.
+
+* Fixed bugs in stream support due to improper strpos() 
+param order.  Thanks, Antti Holvikari.
+  </notes>
+  <provides type="class" name="Savant3" />
+  <provides type="function" name="Savant3::apiVersion" />
+  <provides type="function" name="Savant3::plugin" />
+  <provides type="function" name="Savant3::getConfig" />
+  <provides type="function" name="Savant3::setAutoload" />
+  <provides type="function" name="Savant3::setCompiler" />
+  <provides type="function" name="Savant3::setErrorText" />
+  <provides type="function" name="Savant3::setExceptions" />
+  <provides type="function" name="Savant3::setExtract" />
+  <provides type="function" name="Savant3::setPluginConf" />
+  <provides type="function" name="Savant3::setTemplate" />
+  <provides type="function" name="Savant3::setEscape" />
+  <provides type="function" name="Savant3::addEscape" />
+  <provides type="function" name="Savant3::getEscape" />
+  <provides type="function" name="Savant3::escape" />
+  <provides type="function" name="Savant3::eprint" />
+  <provides type="function" name="Savant3::setPath" />
+  <provides type="function" name="Savant3::addPath" />
+  <provides type="function" name="Savant3::findFile" />
+  <provides type="function" name="Savant3::assign" />
+  <provides type="function" name="Savant3::assignRef" />
+  <provides type="function" name="Savant3::display" />
+  <provides type="function" name="Savant3::fetch" />
+  <provides type="function" name="Savant3::template" />
+  <provides type="function" name="Savant3::setFilters" />
+  <provides type="function" name="Savant3::addFilters" />
+  <provides type="function" name="Savant3::applyFilters" />
+  <provides type="function" name="Savant3::error" />
+  <provides type="function" name="Savant3::isError" />
+  <provides type="class" name="Savant3_Error" />
+  <provides type="class" name="Savant3_Exception" extends="Exception" />
+  <provides type="class" name="Savant3_Filter" />
+  <provides type="function" name="Savant3_Filter::filter" />
+  <provides type="class" name="Savant3_Plugin" />
+  <provides type="class" name="Savant3_Filter_trimwhitespace" extends="Savant3_Filter" />
+  <provides type="function" name="Savant3_Filter_trimwhitespace::filter" />
+  <provides type="function" name="Savant3_Filter_trimwhitespace::replace" />
+  <provides type="class" name="Savant3_Plugin_ahref" extends="Savant3_Plugin" />
+  <provides type="function" name="Savant3_Plugin_ahref::ahref" />
+  <provides type="class" name="Savant3_Plugin_date" extends="Savant3_Plugin" />
+  <provides type="function" name="Savant3_Plugin_date::date" />
+  <provides type="class" name="Savant3_Plugin_htmlAttribs" extends="Savant3_Plugin" />
+  <provides type="function" name="Savant3_Plugin_htmlAttribs::htmlAttribs" />
+  <provides type="class" name="Savant3_Plugin_image" extends="Savant3_Plugin" />
+  <provides type="function" name="Savant3_Plugin_image::image" />
+  <filelist>
+   <file role="php" md5sum="19fdcdb91ea7a9cf6d2001aadf151129" name="Savant3.php">
+    <replace from="@package_version@" to="version" type="package-info"/>
+   </file>
+   <file role="php" md5sum="f5f068ac0af539e0e7a6f870d9d697b2" name="Savant3/Error.php"/>
+   <file role="php" md5sum="ed2304d16e288636cf0ed297db134eeb" name="Savant3/Exception.php"/>
+   <file role="php" md5sum="cdae92aeee6ee218b8c8a2746236eb45" name="Savant3/Filter.php"/>
+   <file role="php" md5sum="f5a84d2d1f98590d2225d62e0ddfef9b" name="Savant3/Plugin.php"/>
+   <file role="php" md5sum="773761857f5e3d09c2d07d8424edcff7" name="Savant3/resources/Savant3_Filter_trimwhitespace.php"/>
+   <file role="php" md5sum="275390459d72485656accb505cd3a790" name="Savant3/resources/Savant3_Plugin_ahref.php"/>
+   <file role="php" md5sum="4219bf1dca1a773d0f86e2e43aaaa696" name="Savant3/resources/Savant3_Plugin_date.php"/>
+   <file role="php" md5sum="ea29212c25e3342d27a741e817595e1f" name="Savant3/resources/Savant3_Plugin_htmlAttribs.php"/>
+   <file role="php" md5sum="ed0ab8e7bce015667cbe3f82b051a085" name="Savant3/resources/Savant3_Plugin_image.php"/>
+   <file role="test" md5sum="5291ab5a44f251c051fc04444d1e7e89" name="Savant3/tests/00_prepend.php"/>
+   <file role="test" md5sum="0588659eb1f34953ed6350814cdd85dc" name="Savant3/tests/01_assign.phpt"/>
+   <file role="test" md5sum="b085bbbe7b3e23901b240ddb590c0146" name="Savant3/tests/02_output.phpt"/>
+   <file role="test" md5sum="fa322bb7f5d9169c8453b5fe005a2b48" name="Savant3/tests/03_filters.phpt"/>
+   <file role="test" md5sum="49ad1d952e74729767e4570218713be7" name="Savant3/tests/04_plugins_ahref.phpt"/>
+   <file role="test" md5sum="ab6f6180cccb856525f72c1908f467dc" name="Savant3/tests/04_plugins_date.phpt"/>
+   <file role="test" md5sum="b455f7f358a55f06390a5179346c00b0" name="Savant3/tests/04_plugins_fester.phpt"/>
+   <file role="test" md5sum="3ccb0a8721437ad64f6611e96494be3e" name="Savant3/tests/04_plugins_image.phpt"/>
+   <file role="test" md5sum="42528048e3dc47800eb959ddbb538d65" name="Savant3/tests/05_errors.phpt"/>
+   <file role="test" md5sum="9ee7953fe9df2b75aec4a4ffe2126fa1" name="Savant3/tests/06_includes.phpt"/>
+   <file role="test" md5sum="528d795912b12b51fbab628a6761718f" name="Savant3/tests/07_escape.phpt"/>
+   <file role="test" md5sum="c56dd462e8360babf1d8afe9c014e7bf" name="Savant3/tests/08_autoload.phpt"/>
+   <file role="test" md5sum="56f2d363f0159f7852212d60260f48df" name="Savant3/tests/resources/savant.gif"/>
+   <file role="test" md5sum="81666dc9179ca44a6008cf754cf3175a" name="Savant3/tests/resources/Savant3_Plugin_fester.php"/>
+   <file role="test" md5sum="4c3eaa1214f2be333919236545f5473d" name="Savant3/tests/templates/02_output.tpl.php"/>
+   <file role="test" md5sum="1882656933846fec87bce964457d57bd" name="Savant3/tests/templates/03_filters.tpl.php"/>
+   <file role="test" md5sum="b0d4726a2269f507b5a0801fe367bfbb" name="Savant3/tests/templates/04_plugins_ahref.tpl.php"/>
+   <file role="test" md5sum="8def3afabf720eb36e0b9963f3363765" name="Savant3/tests/templates/04_plugins_date.tpl.php"/>
+   <file role="test" md5sum="dfb2e892ce7973a30d05de10c7a1114a" name="Savant3/tests/templates/04_plugins_fester.tpl.php"/>
+   <file role="test" md5sum="777a54b323c963fc22e95c8a2ae4ec74" name="Savant3/tests/templates/04_plugins_form.tpl.php"/>
+   <file role="test" md5sum="d4fa364eb7e14ae1174d1f9eec7ee566" name="Savant3/tests/templates/04_plugins_image.tpl.php"/>
+   <file role="test" md5sum="09bb05742f17716f3e999dbc96af6b45" name="Savant3/tests/templates/06_includes.tpl.php"/>
+   <file role="test" md5sum="45ebcda1a0c6e41b42bd0f3b18a12335" name="Savant3/tests/templates/07_escape.tpl.php"/>
+   <file role="test" md5sum="0ed1357738d8565dbc46654a2ab33e09" name="Savant3/tests/templates/footer.tpl.php"/>
+   <file role="test" md5sum="df9ccae734561bf980f5c1399a314033" name="Savant3/tests/templates/header.tpl.php"/>
+  </filelist>
+ </release>
+</package>

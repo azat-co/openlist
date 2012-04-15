@@ -1,0 +1,1 @@
+<h2><?php echo $this->ad['subject']; ?><?php echo  (!empty($this->ad['location']))? ' ('.$this->ad['location'].')':''?></h2>		

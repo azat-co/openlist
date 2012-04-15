@@ -1,0 +1,36 @@
+DirectoryIndex index.php
+
+php_flag magic_quotes_gpc Off
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://localhost/$1 [R=301,NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !(.*)\.(.*)$
+RewriteRule ^(.*)$ http://localhost/$1/ [L,R=301] 
+
+
+RewriteRule ^ads/([0-9]{1,11}).html$ ad.php?id=$1
+RewriteRule ^content/([A-Za-z]{1,20}).html$ content.php?name=$1
+RewriteRule ^search/(.*)$ search.php$1
+RewriteRule ^post/$ post.php
+RewriteRule ^post/([A-Za-z_-]{1,20})/$ post.php?city_name=$1
+RewriteRule ^post/([A-Za-z_-]{1,20})/([A-Za-z0-9_-]{1,20})/$ post.php?city_name=$1&cat_name=$2
+RewriteRule ^favorites/$ favorites.php
+RewriteRule ^favorites/([0-9]+)/$ favorites.php?page=$1
+RewriteRule ^view/$ index.php
+RewriteRule ^cities/$ index.php?action=cities
+RewriteRule ^view/([A-Za-z_-]{1,20})/$ index.php?city_name=$1
+RewriteRule ^view/([A-Za-z_-]{1,20})/([A-Za-z0-9_-]{1,20})/$ index.php?city_name=$1&cat_name=$2
+RewriteRule ^view/([A-Za-z_-]{1,20})/([A-Za-z0-9_-]{1,20})/([0-9]+)/$ index.php?city_name=$1&cat_name=$2&page=$3
+RewriteRule ^contactus/$ contactus.php
+RewriteRule ^rss/([A-Za-z_-]{1,20})/([A-Za-z0-9_-]{1,20})/$ rss.php?city_name=$1&cat_name=$2
+RewriteRule ^ad_manager/([a-z]{1,10})_([0-9]{1,11})_([A-Za-z0-9]{32})/$ ad_manager.php?action=$1&id=$2&code=$3
+RewriteRule ^photos/([0-9]{1,11})/$ photo.php?id=$1
+
+
+
+
+ 

@@ -1,0 +1,65 @@
+#footer-box {
+	margin-left:auto;
+	margin-right:auto;
+	width:50em;
+	font-size:100%;
+	padding-bottom:1em;
+}
+#push-box {
+	height:0em;
+	display:none;
+	}
+#line-footer-box {
+	/*width:75%;*/
+}
+#wrapper-box{
+	margin: 0 auto -4em;
+}
+#compact-city-list-box {
+	/*height:75em;*/
+	}
+body {
+text-align:center;
+}
+#wrapper-box, #footer-box {text-align:left;}
+#menu-box {
+height:6em;
+
+}
+#sub-menu-box {
+	padding-top:4.5em;
+	
+	}
+#logo-box	{
+	padding-left:0.5em;
+	}
+#logo-box a{	
+	font-size:180%;
+	display:block;
+}
+#logo-box span#moto{	
+	padding-left:2em;
+}
+#menu-box,#nav-menu-box {
+	text-align:center;
+	}
+
+#menu-wrapper-box, #nav-menu-wrapper-box {
+	width:50em;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+}
+#content-box {
+	padding-top:3em;
+	padding-left:6em;
+	padding-right:4em;
+	padding-bottom:6em;
+	}
+#content-box li{padding-bottom:1.5em;}	
+#wrapper-box {
+	text-align:center;
+ }	
+#footer-box {
+	text-align:center;
+}	

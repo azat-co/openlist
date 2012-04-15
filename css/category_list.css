@@ -1,0 +1,106 @@
+ #rel, #ccc,#per,#ser{
+	/*text-align:right;
+	margin-right:2em;*/
+	}
+#real_estate{
+	float:left;
+	}
+#job{
+	float:right;
+	}
+#community{
+	float:left;	
+}
+#dating {
+	float:right;
+}
+#sale{
+	float:left;
+	}
+#service{
+	float:right;
+	}
+#job_search {
+	float:right;
+}
+	
+#footer-box {
+	margin-left:auto;
+	margin-right:auto;
+	/*width:50em;*/
+	width:50em;
+	font-size:100%;
+	padding-bottom:1em;
+}
+#push-box {
+	height:0em;
+	display:none;
+	}
+#line-footer-box {
+	/*width:75%;*/
+}
+#wrapper-box{
+	margin: 0 auto -4em;
+}
+#compact-city-list-box {
+	/*height:75em;*/
+	}
+body {
+text-align:center;
+}
+#wrapper-box, #footer-box {text-align:left;}
+#menu-box {
+height:6em;
+
+}
+#sub-menu-box {
+	padding-top:4.5em;
+	
+	}
+#logo-box	{
+	padding-left:0.5em;
+	}
+#logo-box a{	
+	font-size:180%;
+	display:block;
+	width:6.2em;
+}
+#logo-box span#moto{	
+	padding-left:2em;
+}
+#menu-box,#nav-menu-box {
+	text-align:center;
+	}
+
+#menu-wrapper-box, #nav-menu-wrapper-box {
+	width:50em;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+}/*
+#content-box {
+	vertical-align:middle;
+	}*/
+#wrapper-box {
+	text-align:center;
+ }	
+#footer-box {
+	text-align:center;
+}	
+#category-list-box {
+	padding-left:3%;
+	}
+
+#main-footer-box {padding-left:0em;}
+
+#logo-footer-box { padding-right:0em;}	
+
+#city-list-box {
+	line-height:1.8em;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:5em;
+	padding-left:1em;
+	text-align:left;
+	width:40em;
+}

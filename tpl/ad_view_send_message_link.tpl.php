@@ -1,0 +1,2 @@
+<input type="button" id="ad-send-message-button" title="<?php echo LANG_AD_SM_LINK_TITLE?>" value="<?php echo LANG_AD_SM_LINK?>" />
+<?php /*<a href="#ad-send-message-box" title="<?php echo LANG_AD_SM_LINK_TITLE?>"><?php echo LANG_AD_SM_LINK?></a> */?>
