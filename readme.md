@@ -1,14 +1,11 @@
-#
-Welcome to openList
+# Welcome to openList
 
 
-##
-openList is free PHP web application for ad classified websites which you can customize into any Craigslist like website.
-Project website is at [openList.co]("http://openList.co")
+## openList is free PHP web application for ad classified websites which you can customize into any Craigslist like website.
+## Project website is at [openList.co]("http://openList.co")
 
 
-###
-Features
+### Features
 
 - Custom fields for ad categories like real estate, for sale etc.
 - Email verification and ad manager for deletion/editing
@@ -20,8 +17,7 @@ Features
 - nested categories
 
 
-###
-Installation
+### Installation
 
 1. Download application/package
 1. Modify _class/systemconsts.class.php_ with your database parameters
@@ -30,8 +26,7 @@ Installation
 1. View application at localhost or your custom host name (*it will be pre-populated with data*)
 
 
-###
-Customization
+### Customization
 
 - _class/config.php_ - global constants
 - _class/systemconsts.class.php_ - database parameters
@@ -40,8 +35,7 @@ Customization
 To change cities, categories and other data just modify SQL statements in _install.php_ or edit your database with phpMyAdmin.
 
 
-###
-Libraries
+### Libraries
 
 - Slightly modified PHP template engine [Savant3]: http://phpsavant.com/
 - JavaScript and HTML WYSIWYG client-side editor [TinyMCE]: http://www.tinymce.com/
@@ -49,8 +43,7 @@ Libraries
 - PHP Captcha script [Securimage]: http://www.phpcaptcha.org/
 
 
-###
-Future Possible Development
+### Future Possible Development
 
 - Admin panel
 - More user-friendly customization of initial data (ie install.php)
