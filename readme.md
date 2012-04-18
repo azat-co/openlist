@@ -2,7 +2,7 @@
 
 
 ## openList is free PHP web application for ad classified websites which you can customize into any Craigslist like website.
-### Project website is at [openList.co]: http://openList.co
+### Project website is at [openList.co](http://openList.co)
 
 
 ### Features
@@ -37,10 +37,10 @@ To change cities, categories and other data just modify SQL statements in _insta
 
 ### Libraries
 
-- Slightly modified PHP template engine [Savant3]: http://phpsavant.com/
-- JavaScript and HTML WYSIWYG client-side editor [TinyMCE]: http://www.tinymce.com/
-- PHP HTML filter [HTML Purifier]: http://htmlpurifier.org/
-- PHP Captcha script [Securimage]: http://www.phpcaptcha.org/
+- Slightly modified PHP template engine [Savant3](http://phpsavant.com/)
+- JavaScript and HTML WYSIWYG client-side editor [TinyMCE](http://www.tinymce.com/)
+- PHP HTML filter [HTML Purifier](http://htmlpurifier.org/)
+- PHP Captcha script [Securimage](http://www.phpcaptcha.org/)
 
 
 ### Future Possible Development
