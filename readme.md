@@ -2,7 +2,7 @@
 
 
 ## openList is free PHP web application for ad classified websites which you can customize into any Craigslist like website.
-## Project website is at [openList.co]("http://openList.co")
+### Project website is at [openList.co]: http://openList.co
 
 
 ### Features
@@ -46,4 +46,4 @@ To change cities, categories and other data just modify SQL statements in _insta
 ### Future Possible Development
 
 - Admin panel
-- More user-friendly customization of initial data (ie install.php)
+- More user-friendly customization of initial data (ie _install.php_)
