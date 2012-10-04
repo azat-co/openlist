@@ -8,8 +8,8 @@
 	define ('CONF_DATE_LIMIT',60); //limit after how many days ad won't show
 	date_default_timezone_set('Europe/London');
 	// date_default_timezone_set('Europe/Moscow');
-	define ('CONF_LANG','ru');
-	//define ('CONF_LANG','en-us');
+	// define ('CONF_LANG','ru');
+	define ('CONF_LANG','en-us');
 	
 	define('CONF_ENC','UTF-8');
 	define('DATE_FORMAT','d/m/Y');
